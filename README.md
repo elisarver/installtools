@@ -22,6 +22,6 @@ Note the `//go:build tools`/`// +build tools` directive(s), which makes the comp
 
 ## How do I install?
 
-First, `go install github.com/elisarver/installtools/cmd/gotoolinstaller` to get the tool and then run `gotoolinstaller | sh` to install the packages.
+First, `go install github.com/elisarver/installtools/cmd/go-tool-installer` to get the tool and then run `go-tool-installer | sh` to install the packages.
 
 You can try it in the example directory, which installs a specific version of golangci-lint that you can verify with --version, post-install.
