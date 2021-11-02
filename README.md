@@ -1,11 +1,11 @@
 # installtools
-Code to install tools in the tools pattern
+Code to install tools using the tools.go pattern
 
 ## What is the "tools" pattern?
 
 Go has an informal pattern of naming repository targets for tools to install in a project, used in combination with go.mod to handle dependency version.
 
-It looks like this inside the file:
+It looks similar to this:
 
 ```go
 //go:build tools
