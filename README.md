@@ -14,13 +14,14 @@ It looks like this inside the file:
 package tools
 
 import (
-	_ "github.com/go-swagger/go-swagger/cmd/swagger"
-	_ "github.com/maxbrunsfeld/counterfeiter/v6"
+	_ "github.com/golangci/golangci-lint/cmd/golangci-lint@v1.42.0"
 )
 ```
 
-Note the `//go:build tools`/`// +build tools` directive(s), which makes the compiler skip this particular file.
+Note the `//go:build tools`/`// +build tools` directive(s), which makes the compiler skip this particular file. The error of including the specific version at this point doesn't matter; only the textual representation does for the install tool to use it.
 
-## How do I do the install?
+## How do I install?
 
-You could use a sed script to do some go modding, but you happen to have a programming language at your disposal, so let's make a main and run it!
+First, `go install github.com/elisarver/installtools/cmd/gotoolinstaller` to get the tool and then run `gotoolinstaller | sh` to install the packages.
+
+You can try it in the example directory, which installs a specific version of golangci-lint that you can verify with --version, post-install.
